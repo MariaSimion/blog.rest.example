@@ -20,6 +20,19 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+
+        <!-- Dependency to the repository project is a must -->
+        <dependency>
+            <groupId>com.miki</groupId>
+            <artifactId>blog.rest.example.repository</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 

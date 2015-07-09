@@ -38,4 +38,8 @@ public class MongoDBArticleRepository implements ArticleRepository {
         Query query = query(where("authorsList").is(author));
         return operations.find(query, Article.class);
     }
+
+    public List<Article> findAll() {
+        return operations.findAll(Article.class);
+    }
 }

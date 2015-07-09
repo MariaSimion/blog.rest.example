@@ -13,9 +13,11 @@ public interface ArticleRepository {
     Article findById(String id);
 
 
-    Article save(Article customer);
+    Article save(Article article);
 
 
     List<Article> findByAuthor(Long author);
+
+    List<Article> findAll();
 
 }
