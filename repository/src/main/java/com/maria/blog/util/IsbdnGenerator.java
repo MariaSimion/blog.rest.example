@@ -1,4 +1,4 @@
-package com.miki.blog.util;
+package com.maria.blog.util;
 
 import java.util.Random;
 

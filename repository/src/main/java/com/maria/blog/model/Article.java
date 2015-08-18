@@ -1,9 +1,10 @@
-package com.miki.blog.model;
+package com.maria.blog.model;
 
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,22 +17,22 @@ public class Article extends AbstractEntity {
 
     private String content;
 
-    @Indexed(unique = true)
-    private String isbdn;
+    private final String author = "Maria Simion";
 
+    private Date date;
 
-    private List<String> authorsList = new ArrayList<String>();
-
-    public List<String> getAuthorsList() {
-        return authorsList;
+    public Date getDate() {
+        return date;
     }
 
-    public void setAuthorsList(List<String> authorsList) {
-        this.authorsList = authorsList;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public void addAuthor(Author author) {
-        this.authorsList.add(author.getId());
+    private List<Comment> commentList = new ArrayList<Comment>();
+
+    public String getAuthor() {
+        return author;
     }
 
     public String getTitle() {
@@ -50,11 +51,16 @@ public class Article extends AbstractEntity {
         this.content = content;
     }
 
-    public String getIsbdn() {
-        return isbdn;
+
+    public List<Comment> getCommentList() {
+        return commentList;
     }
 
-    public void setIsbdn(String isbdn) {
-        this.isbdn = isbdn;
+    public void addComment(Comment comment) {
+        this.commentList.add(comment);
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
     }
 }

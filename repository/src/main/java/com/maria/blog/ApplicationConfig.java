@@ -1,4 +1,4 @@
-package com.miki.blog;
+package com.maria.blog;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;

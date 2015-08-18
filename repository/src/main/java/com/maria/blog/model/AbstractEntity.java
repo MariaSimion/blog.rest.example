@@ -1,8 +1,6 @@
-package com.miki.blog.model;
+package com.maria.blog.model;
 
 import org.springframework.data.annotation.Id;
-
-import java.math.BigInteger;
 
 /**
  * Created by mcsere on 7/8/2015.
